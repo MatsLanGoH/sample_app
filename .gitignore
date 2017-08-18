@@ -26,3 +26,6 @@
 
 # Ignore Spring files.
 /spring/*.pid
+.rubocop.yml
+.rubocop_todo.yml
+.vscode/*
