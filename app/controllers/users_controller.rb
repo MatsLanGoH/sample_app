@@ -11,7 +11,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)  # Initial implementation
     if @user.save
       log_in @user
-      remember @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user  # replaces redirect_to user_url(@user)
     else
@@ -19,8 +18,22 @@ class UsersController < ApplicationController
     end
   end
 
-  private
+  def edit
+    @user = User.find(params[:id])
+  end
 
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "Profile updated!"
+      redirect_to @user
+    else
+      render 'edit'
+    end
+  end
+
+  private
+    # Retrieve strong parameters from form.
     def user_params
       params.require(:user).permit(:name, :email,
                                    :password, :password_confirmation)
