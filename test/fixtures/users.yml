@@ -2,6 +2,7 @@ testuser:
   name: Tester Test
   email: test@test.test
   password_digest: <%= User.digest('password') %>
+  admin: true
 
 hulk:
   name: Bruce Banner
