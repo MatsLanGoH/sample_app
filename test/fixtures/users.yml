@@ -7,3 +7,30 @@ hulk:
   name: Bruce Banner
   email: bigguy@green.com
   password_digest: <%= User.digest('password') %>
+
+tony:
+  name: Tony Stark
+  email: ironman@stark.com
+  password_digest: <%= User.digest('password') %>
+
+thor:
+  name: Thor Odinson
+  email: godofthunder@asgard.realm
+  password_digest: <%= User.digest('password') %>
+
+captain:
+  name: Steve Rogers
+  email: captainamerica@us.gov
+  password_digest: <%= User.digest('password') %>
+
+nick:
+  name: Nick Fury
+  email: nick@shield.gov
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n} " %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
