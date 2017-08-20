@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
 
   resources :users
+  # TODO: placeholder for account activations
+  # TODO: placeholder for password resets
+  resources :microposts,      only: [:create, :destroy]
 
 end
 
