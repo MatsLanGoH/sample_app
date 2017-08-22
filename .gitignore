@@ -31,4 +31,4 @@
 .vscode/*
 
 # Ignore uploaded test images.
-!/public/uploads
+/public/uploads
