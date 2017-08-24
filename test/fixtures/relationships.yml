@@ -1,0 +1,15 @@
+one:
+  follower: hulk
+  followed: thor
+
+two:
+  follower: hulk
+  followed: tony
+
+three:
+  follower: captain
+  followed: hulk
+
+four:
+  follower: nick
+  followed: hulk 

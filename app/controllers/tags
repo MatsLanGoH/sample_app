@@ -1,0 +1,4 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+create	/Users/sirfelius/Documents/localCode/workspace/sample_app/app/controllers/relationships_controller.rb	/^	def create$/;"	f	language:Ruby	class:RelationshipsController
+destroy	/Users/sirfelius/Documents/localCode/workspace/sample_app/app/controllers/relationships_controller.rb	/^	def destroy$/;"	f	language:Ruby	class:RelationshipsController
+RelationshipsController	/Users/sirfelius/Documents/localCode/workspace/sample_app/app/controllers/relationships_controller.rb	/^class RelationshipsController < ApplicationController$/;"	c	language:Ruby
