@@ -76,7 +76,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?('')
   end
 
-  test "dependendt microposts should be destroyed" do
+  test "dependent microposts should be destroyed" do
     @user.save
     @user.microposts.create!(content: "Lorem ipsum")
     assert_difference 'Micropost.count', -1 do
@@ -85,13 +85,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "should follow and unfollow a user" do
-    hulk = users(:hulk)
+    nick = users(:nick)
     thor = users(:thor)
-    assert_not hulk.following?(thor)
-    hulk.follow(thor)
-    assert hulk.following?(thor)
-    assert thor.followers.include?(hulk)
-    hulk.unfollow(thor)
-    assert_not hulk.following?(thor)
+    assert_not nick.following?(thor)
+    nick.follow(thor)
+    assert nick.following?(thor)
+    assert thor.followers.include?(nick)
+    nick.unfollow(thor)
+    assert_not nick.following?(thor)
   end
 end
